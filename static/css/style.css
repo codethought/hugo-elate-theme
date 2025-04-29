@@ -349,15 +349,21 @@ h1, h2, h3, h4, h5, h6 {
   transition: 0s;
 }
 
+/* Main home section styling - full-width hero element */
 #fh5co-home {
-  background-color: transparent;
-  background-size: cover;
-  background-attachment: fixed;
-  position: relative;
-  width: 100%;
-  background-color: #52d3aa;
-  color: #fff;
-  overflow: hidden;
+    /* Background settings */
+    background-color: #52d3aa;
+    background-size: cover;
+    background-attachment: fixed;
+
+    /* Positioning and dimensions */
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+
+    /* Text and overflow settings */
+    color: #fff;
+    overflow: hidden;
 }
 #fh5co-home .gradient {
   position: absolute;
@@ -447,10 +453,6 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 #fh5co-intro > div {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
   display: flex;
   flex-wrap: wrap;
 }
@@ -546,17 +548,22 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
   font-weight: bold;
 }
+
 .watch-video .btn-video {
-  display: block;
-  font-size: 60px;
-  height: 120px;
-  width: 120px;
-  margin: 0 auto;
-  border: 2px solid #52d3aa;
-  line-height: 0;
-  display: table;
-  text-align: center;
-  border-radius: 50%;
+    /* Positioning */
+    display: table;
+    margin: 0 auto;
+    text-align: center;
+
+    /* Dimensions */
+    width: 120px;
+    height: 120px;
+
+    /* Styling */
+    border: 2px solid #52d3aa;
+    border-radius: 50%;
+    font-size: 60px;
+    line-height: 0;
 }
 .watch-video .btn-video:hover, .watch-video .btn-video:focus, .watch-video .btn-video:active {
   text-decoration: none;
@@ -568,8 +575,6 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
   right: -9px;
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
   transition: 0.3s;
 }
 .watch-video .btn-video:hover i, .watch-video .btn-video:focus i {
@@ -654,14 +659,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #fh5co-counters {
-  background: #52d3aa;
-  overflow: hidden;
-  background-color: transparent;
-  background-size: cover;
-  background-attachment: fixed;
-  position: relative;
-  width: 100%;
-  padding: 9em 0 10em 0;
+    /* Positioning */
+    position: relative;
+
+    /* Sizing */
+    width: 100%;
+
+    /* Appearance */
+    background-color: transparent;
+    background-size: cover;
+    background-attachment: fixed;
+
+    /* Spacing */
+    padding: 9em 0 10em;
 }
 @media screen and (max-width: 768px) {
   #fh5co-counters {
@@ -753,27 +763,30 @@ h1, h2, h3, h4, h5, h6 {
   color: white;
   text-decoration: none;
 }
+
 #fh5co-testimonials .box-testimony blockquote {
-  padding-left: 0;
-  border-left: none;
-  padding: 30px;
-  background: #fff;
-  background: #52d3aa;
-  font-size: 20px;
-  font-weight: 300;
-  position: relative;
-  border-radius: 7px;
+    /* Box model */
+    padding: 30px;
+    border-radius: 7px;
+    border-left: none;
+
+    /* Typography */
+    font-size: 20px;
+    font-weight: 300;
+
+    /* Visual */
+    background: #52d3aa;
+    position: relative;
 }
-#fh5co-testimonials .box-testimony blockquote:after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 40px;
-  border-top: 10px solid black;
-  border-top-color: #fff;
-  border-top-color: #52d3aa;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
+
+.testimony__blockquote-triangle {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 40px;
+    border-top: 10px solid #52d3aa;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
 }
 #fh5co-testimonials .box-testimony blockquote p {
   font-style: italic;
@@ -1121,17 +1134,25 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .fh5co-nav-toggle {
-  position: absolute;
-  top: 2px;
-  right: 0;
-  z-index: 21;
-  padding: 6px 0 0 0;
-  display: block;
-  margin: 0 auto;
-  display: none;
-  height: 44px;
-  width: 25px;
-  border-bottom: none !important;
+    /* Positioning */
+    position: absolute;
+    top: 2px;
+    right: 0;
+    z-index: 21;
+
+    /* Dimensions */
+    width: 25px;
+    height: 44px;
+
+    /* Spacing */
+    padding: 6px 0 0 0;
+    margin: 0 auto;
+
+    /* Display */
+    display: none;
+
+    /* Other styling */
+    border-bottom: none !important;
 }
 @media screen and (max-width: 768px) {
   .fh5co-nav-toggle {
