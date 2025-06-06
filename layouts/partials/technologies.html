@@ -1,0 +1,31 @@
+<section id="fh5co-technologies" data-section="technologies">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 section-heading text-center">
+                <h2 class="to-animate">{{ .Site.Params.technologies.title }}</h2>
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2 subtext to-animate">
+                        <h3>{{ .Site.Params.technologies.description }}</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="flex to-animate">
+                    <div class="animate-scroll-inner">
+                        <!-- First set of icons -->
+                        {{ range .Site.Params.technologies.items }}
+                            <div class="tech-icon"><img src="/images/tech/{{ .icon }}" alt="{{ .name }}"></div>
+                        {{ end }}
+
+                        <!-- Duplicate for the infinite scroll effect -->
+                        {{ range .Site.Params.technologies.items }}
+                            <div class="tech-icon"><img src="/images/tech/{{ .icon }}" alt="{{ .name }}"></div>
+                        {{ end }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

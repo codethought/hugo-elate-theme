@@ -360,8 +360,10 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
     width: 100%;
     min-height: 100vh;
+    max-height: 900px;
 
-    /* Text and overflow settings */
+
+  /* Text and overflow settings */
     color: #fff;
     overflow: hidden;
 }
@@ -848,7 +850,6 @@ h1, h2, h3, h4, h5, h6 {
 #fh5co-work:before, #fh5co-work:after {
   position: absolute;
   transform: rotate(-1.7deg);
-  background-color: #fff;
   content: "";
   z-index: 3;
   display: inline-block;
@@ -859,10 +860,12 @@ h1, h2, h3, h4, h5, h6 {
 #fh5co-work:before {
   top: 0;
   margin-top: -35px;
+  background-color: #fff;
 }
 #fh5co-work:after {
   bottom: 0;
   margin-bottom: -35px;
+  background-color: #f2f9f7;
 }
 #fh5co-work .section-heading h2 {
   color: #fff;

@@ -1,0 +1,74 @@
+/* Custom styling for intro section */
+#fh5co-intro .d-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#fh5co-intro .fh5co-block {
+    width: calc(50% - 30px);
+    margin: 15px;
+    float: none;
+}
+
+/* Responsive adjustments for intro */
+@media screen and (max-width: 768px) {
+    #fh5co-intro .fh5co-block {
+        width: 100%;
+        margin: 0 0 20px 0;
+    }
+}
+
+/* Custom styling for testimonials section */
+#fh5co-testimonials .d-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#fh5co-testimonials .testimonial-block {
+    width: calc(33.333% - 30px);
+    margin: 15px;
+    float: none;
+}
+
+/* Responsive adjustments for testimonials */
+@media screen and (max-width: 992px) {
+    #fh5co-testimonials .testimonial-block {
+        width: calc(50% - 30px);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #fh5co-testimonials .testimonial-block {
+        width: 100%;
+        margin: 0 0 20px 0;
+    }
+}
+
+/* Custom styling for about section */
+#fh5co-about .d-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#fh5co-about .about-block {
+    width: calc(33.333% - 30px);
+    margin: 15px;
+    float: none;
+}
+
+/* Responsive adjustments for about section */
+@media screen and (max-width: 992px) {
+    #fh5co-about .about-block {
+        width: calc(50% - 30px);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #fh5co-about .about-block {
+        width: 100%;
+        margin: 0 0 20px 0;
+    }
+}

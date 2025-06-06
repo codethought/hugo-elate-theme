@@ -434,9 +434,28 @@
 	};
 
 
-	
-	
 
+
+
+	var technologiesAnimate = function() {
+		var technologies = $('#fh5co-technologies');
+		if (technologies.length > 0) {
+			technologies.waypoint(function(direction) {
+				if (direction === 'down' && !$(this.element).hasClass('animated')) {
+					setTimeout(function() {
+						technologies.find('.to-animate').each(function(k) {
+							var el = $(this);
+							setTimeout(function() {
+								el.addClass('fadeInUp animated');
+							}, k * 200, 'easeInOutExpo');
+						});
+					}, 200);
+
+					$(this.element).addClass('animated');
+				}
+			}, { offset: '80%' });
+		}
+	};
 
 	
 	
@@ -466,8 +485,28 @@
 		aboutAnimate();
 		countersAnimate();
 		contactAnimate();
-		
+		technologiesAnimate();
 
+
+	});
+
+	// Add this to the bottom of the existing main.js file,
+// making sure it's inside the document ready function if one exists
+
+// Smooth scrolling for section navigation
+	$(document).ready(function() {
+		$(".js-scroll-trigger").on('click', function(event) {
+			if (this.hash !== "") {
+				event.preventDefault();
+				var hash = this.hash;
+
+				$('html, body').animate({
+					scrollTop: $(hash).offset().top - 50
+				}, 800, function(){
+					window.location.hash = hash;
+				});
+			}
+		});
 	});
 
 

@@ -1,0 +1,208 @@
+html {
+    scroll-behavior: smooth;
+}
+
+/* For Safari and older browsers that don't support scroll-behavior */
+.smoothscroll {
+    -webkit-overflow-scrolling: touch;
+}
+
+#fh5co-home {
+    min-height: 900px !important;
+    height: 900px !important;
+}
+
+#fh5co-home .gradient {
+    height: 900px !important;
+}
+
+.bg-dark-section {
+    background-color: #2F3C4F; /* More in line with the Elate theme's color scheme */
+    background-size: cover;
+    background-position: center;
+    padding: 2rem 1.5rem;
+    overflow: hidden;
+    position: relative;
+    color: white;
+    margin: 2rem 0;
+    border-radius: 4px; /* Less rounded corners to match the theme */
+}
+
+/* Add overlays similar to the fh5co-block elements */
+.bg-dark-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5); /* Darker overlay */
+    z-index: 1;
+}
+
+/* Make sure content sits above the overlay */
+.bg-dark-section h2,
+.bg-dark-section p,
+.bg-dark-section .flex {
+    position: relative;
+    z-index: 2;
+}
+
+/* Match heading styles with the theme */
+.bg-dark-section h2 {
+    font-weight: 300;
+    font-size: 30px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+/* Match paragraph styles */
+.bg-dark-section p {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 20px;
+}
+
+/* Technology section styling with distinct background color */
+#fh5co-technologies {
+    padding: 7em 0;
+    background-color: #f2f9f7; /* Light minty/teal background - complements the theme's accent color */
+    clear: both;
+    position: relative;
+}
+
+/* Add the slanted section effect */
+#fh5co-technologies:before {
+    position: absolute;
+    content: '';
+    background: #f2f9f7; /* Same as section background */
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 0;
+    transform: skewY(-3deg);
+    transform-origin: top left;
+}
+
+/* Make sure all content is above the slanted background */
+#fh5co-technologies .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Match the centered heading style of work section */
+#fh5co-technologies .section-heading {
+    text-align: center;
+    margin-bottom: 4em;
+}
+
+/* Section heading with special color */
+#fh5co-technologies .section-heading h2 {
+    font-size: 40px;
+    line-height: 1.5;
+    font-weight: 700;
+    color: #2f3c4f; /* Darker color for contrast */
+    margin-bottom: 0;
+}
+
+#fh5co-technologies .section-heading h3 {
+    font-size: 20px;
+    line-height: 1.5;
+    color: #000000; /* Theme's accent color */
+    text-align: center;
+}
+
+#fh5co-technologies .subtext {
+    text-align: center;
+}
+
+/* Container for the scrolling icons with contrasting background */
+#fh5co-technologies .flex {
+    height: 120px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    margin: 2em 0;
+    background-color: #ffffff; /* White container against minty background */
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(82, 211, 170, 0.1); /* Subtle shadow with theme accent color */
+    padding: 10px 0;
+}
+
+/* Subtle accent border for the icon container */
+#fh5co-technologies .flex:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    height: 3px;
+    background: linear-gradient(to right, transparent, rgba(82, 211, 170, 0.5), transparent);
+}
+
+#fh5co-technologies .animate-scroll-inner {
+    display: flex;
+    width: 200%;
+    animation: scroll-left 30s linear infinite;
+    height: 100px;
+    align-items: center;
+}
+
+#fh5co-technologies .tech-icon {
+    flex: 0 0 auto;
+    padding: 0 1.5em;
+    text-align: center;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Icon styling */
+#fh5co-technologies .tech-icon img {
+    height: 60px;
+    width: auto;
+    max-width: 100%;
+    filter: grayscale(0%);
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+#fh5co-technologies .tech-icon:hover img {
+    transform: scale(1.1);
+    filter: drop-shadow(0 2px 5px rgba(82, 211, 170, 0.3));
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    #fh5co-technologies {
+        padding: 5em 0;
+    }
+    
+    #fh5co-technologies .section-heading h2 {
+        font-size: 30px;
+    }
+    
+    #fh5co-technologies .tech-icon img {
+        height: 50px;
+    }
+    
+    #fh5co-technologies .flex {
+        height: 100px;
+    }
+}
+
+/* Increase specificity to override theme styles */
+section#fh5co-work.animated::after,
+html body section#fh5co-work.animated::after {
+    background-color: #f2f9f7 !important; /* Change to your desired color */
+}
