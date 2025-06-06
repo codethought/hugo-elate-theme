@@ -4,6 +4,13 @@ title = "Elate theme"
 languageCode = "en-us"
 theme = "hugo-elate-theme"
 
+# for details on why I changed this see https://gohugo.io/configuration/markup/#rendererunsafe
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
 [params]
   
   custom_css = ["css/custom1.css", "css/custom2.css"]
@@ -206,7 +213,8 @@ theme = "hugo-elate-theme"
         ["icon-github", "#"]
       ]
 
-    [[params.about.item]]
+
+      [[params.about.item]]
       name = "Larry Ben"
       position = "Web Designer"
       description = "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts"
@@ -216,7 +224,70 @@ theme = "hugo-elate-theme"
         ["icon-twitter", "#"],
         ["icon-facebook", "#"],
         ["icon-dribbble", "#"]
-      ]      
+      ]
+
+
+[params.technologies]
+        enable = true
+        title = "Technologies & Skills"
+        description = "Our team works with a wide range of cutting-edge technologies"
+
+        [[params.technologies.items]]
+        name = "AWS"
+        icon = "aws.svg"
+
+        [[params.technologies.items]]
+        name = "Docker"
+        icon = "docker.svg"
+
+
+
+        [[params.technologies.items]]
+        name = "Java"
+        icon = "java.svg"
+
+        [[params.technologies.items]]
+        name = "JavaScript"
+        icon = "javascript.svg"
+
+        [[params.technologies.items]]
+        name = "Kubernetes"
+        icon = "kubernetes.svg"
+
+        [[params.technologies.items]]
+        name = "Linux"
+        icon = "linux.svg"
+
+        [[params.technologies.items]]
+        name = "macOS"
+        icon = "macos.svg"
+
+        [[params.technologies.items]]
+        name = "Python"
+        icon = "python.svg"
+
+        [[params.technologies.items]]
+        name = "PyTorch"
+        icon = "pytorch.svg"
+
+        [[params.technologies.items]]
+        name = "React"
+        icon = "react.svg"
+
+        [[params.technologies.items]]
+        name = "Spring"
+        icon = "spring.svg"
+
+        [[params.technologies.items]]
+        name = "TerraForm"
+        icon = "terraform.svg"
+
+        [[params.technologies.items]]
+        name = "Windows"
+        icon = "windows.svg"
+
+
+        # Add more technology items as needed
 
   # Counters section
   [params.counters]
