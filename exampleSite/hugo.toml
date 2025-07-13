@@ -18,7 +18,7 @@ theme = "hugo-elate-theme"
   # Meta
   author = ""
   description = ""
-  email = ""
+  email = "" ## now an api key if you want to use Formspree instead of an email address
 
   # Google Maps Javascript API Key (if not set will default to not passing a key)
   googleMapsApiKey = ""
